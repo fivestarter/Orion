@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+
+
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd"
+        >
+
+    <util:properties id="orionProperties"
+                     location="WEB-INF/properties/orion-#{systemProperties['orion.environment']}.properties"/>
+    <context:property-placeholder properties-ref="orionProperties"/>
+
+    <bean id="tmDS" class="org.apache.tomcat.jdbc.pool.DataSource">
+        <property name="driverClassName" value="${orion_DB_DRIVER_CLASS_NAME}" />
+        <property name="url" value="${orion_DB_URL}" />
+        <property name="username" value="${orion_DB_USER_NAME}" />
+        <property name="password" value="${orion_DB_USER_PASSWORD}" />
+        <property name="maxWait" value="${orion_DB_MAX_WAIT}" />
+        <property name="maxActive" value="${orion_DB_MAX_ACTIVE}" />
+        <property name="maxIdle" value="${orion_DB_MAX_IDLE}" />
+    </bean>
+
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <!--
+                <prop key="hibernate.hbm2ddl.auto">validate</prop>
+                -->
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.dialect">${orion_HIBERNATE_DIALECT}</prop>
+            </props>
+        </property>
+        <property name="dataSource" ref="tmDS" />
+        <property name="persistenceUnitName" value="OrionPU" />
+    </bean>
+
+</beans>

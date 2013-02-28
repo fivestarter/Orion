@@ -1,0 +1,45 @@
+#bodyContainer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 5px auto 10px;
+    min-width: 990px;
+    text-align: left;
+    width: 990px;
+}
+
+#header-part {
+    background: #aaa no-repeat left top;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: white;
+    height: 95px;
+    margin: 0;
+    padding: 0;
+    width: 990px;
+}
+
+#header-title {
+    float: left;
+    font-size: 34px;
+    font-weight: bold;
+    margin-left: 23px;
+    margin-top: 28px;
+}
+
+.header-part-right {
+    background: #aaa no-repeat left top;
+    color: black;
+    float: right;
+    margin: 12px 23px 12px 12px;
+}
+
+#page-frame {
+    background: #eee no-repeat left top;
+    border: 1px solid #DBDBDB;
+}
+
+.body-part {
+    margin: 5px;
+}
