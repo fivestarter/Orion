@@ -26,9 +26,6 @@ allprojects {
             url 'http://download.java.net/maven/2/'
         }
         maven {
-            url 'http://demo.wiley.ru/artifactory/ext-releases-local'
-        }
-        maven {
             url 'http://repo.aduna-software.org/maven2/releases'
         }
         maven {
