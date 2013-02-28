@@ -34,3 +34,10 @@ dependencies {
             [group: 'mysql', name: 'mysql-connector-java', version: mysqlConnectorJavaVersion],
     )
 }
+
+task explodedWar(type: Copy) {
+    into "${buildDir}/exploded"
+    with war
+}
+
+war.dependsOn explodedWar
