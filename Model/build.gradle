@@ -1,0 +1,14 @@
+dependencies {
+    compile(
+            [group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: hibernateJpaApiVersion],
+            [group: 'org.hibernate', name: 'hibernate-entitymanager', version: hibernateEntitymanagerVersion],
+    )
+    compile(
+            [group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: tomcatJdbcVersion],
+    )
+    compile(
+            [group: 'mysql', name: 'mysql-connector-java', version: mysqlConnectorJavaVersion],
+    )
+
+
+}
