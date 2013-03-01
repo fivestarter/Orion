@@ -4,6 +4,13 @@ dependencies {
             [group: 'org.hibernate', name: 'hibernate-entitymanager', version: hibernateEntitymanagerVersion],
     )
     compile(
+            [group: 'org.springframework', name: 'spring-tx', version: springVersion],
+            [group: 'org.springframework', name: 'spring-jdbc', version: springVersion],
+            [group: 'org.springframework', name: 'spring-orm', version: springVersion],
+            [group: 'org.springframework', name: 'spring-aspects', version: springVersion],
+            [group: 'org.aspectj', name: 'aspectjrt', version: "1.7.1"],
+    )
+    compile(
             [group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: tomcatJdbcVersion],
     )
     compile(
