@@ -80,3 +80,15 @@ div.tabpanel div.tab-row li.selected a:link, div.tabpanel div.tab-row a.active:v
 div.tabpanel div.tab-row a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
 }
+
+.plan-panel {
+    overflow: hidden;
+    padding: 5px;
+    background: #FFFFFF;
+}
+
+.time-block {
+    height: 100px;
+    border-bottom: dotted 1px;
+
+}

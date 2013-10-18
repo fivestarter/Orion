@@ -36,8 +36,6 @@ public class BasePanel extends Panel {
     public BasePanel(String id) {
         super(id);
 
-        this.errorMessage = errorMessage;
-
         WebMarkupContainer hmc = new WebMarkupContainer("header-markup-container") {
             @Override
             public boolean isVisible() {

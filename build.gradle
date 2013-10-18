@@ -16,7 +16,10 @@ final mysqlConnectorJavaVersion = '5.1.21'
 ext.mysqlConnectorJavaVersion = mysqlConnectorJavaVersion
 
 allprojects {
+    apply plugin: 'java'
+    apply plugin: 'findbugs'
     apply plugin: 'checkstyle'
+    apply plugin: 'idea'
 
     repositories {
         maven {
@@ -31,13 +34,39 @@ allprojects {
         maven {
             url 'http://people.apache.org/repo/m2-incubating-repository'
         }
+        mavenCentral()
     }
 
 }
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'findbugs'
     apply plugin: 'checkstyle'
+
+    findbugsMain {
+        reports {
+            html {
+                enabled = true
+                destination "${buildDir}/reports/findbugs/findbugs.html"
+            }
+            xml {
+                enabled = false
+            }
+        }
+    }
+
+    findbugsTest {
+        reports {
+            html {
+                enabled = true
+                destination "${buildDir}/reports/findbugs/findbugs_test.html"
+            }
+            xml {
+                enabled = false
+            }
+        }
+    }
 
     checkstyle {
         configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
