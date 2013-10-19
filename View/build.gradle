@@ -11,7 +11,7 @@ dependencies {
             [group: 'org.apache.wicket', name: 'wicket-extensions', version: '6.+'],
             [group: 'org.apache.wicket', name: 'wicket-auth-roles', version: '6.+'],
             [group: 'org.apache.wicket', name: 'wicket-spring', version: '6.+'],
-            [group: 'org.wicketstuff', name: 'wicketstuff-minis', version: '6.0.0']
+            [group: 'org.wicketstuff', name: 'wicketstuff-minis', version: '6.+']
     )
     compile(
             [group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: hibernateJpaApiVersion],
