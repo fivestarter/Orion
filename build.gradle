@@ -1,15 +1,15 @@
 defaultTasks 'Build'
 
-final springVersion = '3.1.2.RELEASE'
+final springVersion = '3.2.4.RELEASE'
 ext.springVersion = springVersion
 
-final hibernateJpaApiVersion = '1.0.1.Final'
+final hibernateJpaApiVersion = '1.0.0.Final'
 ext.hibernateJpaApiVersion = hibernateJpaApiVersion
 
-final hibernateEntitymanagerVersion = '4.1.7.+'
+final hibernateEntitymanagerVersion = '4.2.6.+'
 ext.hibernateEntitymanagerVersion = hibernateEntitymanagerVersion
 
-final tomcatJdbcVersion = '7.0.34'
+final tomcatJdbcVersion = '7.0.42'
 ext.tomcatJdbcVersion = tomcatJdbcVersion
 
 final mysqlConnectorJavaVersion = '5.1.26'
