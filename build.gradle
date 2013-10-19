@@ -12,7 +12,7 @@ ext.hibernateEntitymanagerVersion = hibernateEntitymanagerVersion
 final tomcatJdbcVersion = '7.0.34'
 ext.tomcatJdbcVersion = tomcatJdbcVersion
 
-final mysqlConnectorJavaVersion = '5.1.21'
+final mysqlConnectorJavaVersion = '5.1.26'
 ext.mysqlConnectorJavaVersion = mysqlConnectorJavaVersion
 
 allprojects {
