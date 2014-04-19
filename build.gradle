@@ -1,18 +1,18 @@
 defaultTasks 'Build'
 
-final springVersion = '3.2.4.RELEASE'
+final springVersion = '4.+'
 ext.springVersion = springVersion
 
-final hibernateJpaApiVersion = '1.0.0.Final'
+final hibernateJpaApiVersion = '1.+'
 ext.hibernateJpaApiVersion = hibernateJpaApiVersion
 
-final hibernateEntitymanagerVersion = '4.2.6.+'
+final hibernateEntitymanagerVersion = '4.+'
 ext.hibernateEntitymanagerVersion = hibernateEntitymanagerVersion
 
 final tomcatJdbcVersion = '7.0.42'
 ext.tomcatJdbcVersion = tomcatJdbcVersion
 
-final mysqlConnectorJavaVersion = '5.1.26'
+final mysqlConnectorJavaVersion = '5.+'
 ext.mysqlConnectorJavaVersion = mysqlConnectorJavaVersion
 
 allprojects {
@@ -22,18 +22,6 @@ allprojects {
     apply plugin: 'idea'
 
     repositories {
-        maven {
-            url 'http://demo.wiley.ru/artifactory/repo1'
-        }
-        maven {
-            url 'http://download.java.net/maven/2/'
-        }
-        maven {
-            url 'http://repo.aduna-software.org/maven2/releases'
-        }
-        maven {
-            url 'http://people.apache.org/repo/m2-incubating-repository'
-        }
         mavenCentral()
     }
 

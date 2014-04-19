@@ -1,6 +1,6 @@
 dependencies {
     compile(
-            [group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: hibernateJpaApiVersion],
+            [group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: hibernateJpaApiVersion],
             [group: 'org.hibernate', name: 'hibernate-entitymanager', version: hibernateEntitymanagerVersion],
     )
     compile(
