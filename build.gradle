@@ -25,6 +25,8 @@ allprojects {
         mavenCentral()
     }
 
+    compileJava.dependsOn clean
+
 }
 
 subprojects {
